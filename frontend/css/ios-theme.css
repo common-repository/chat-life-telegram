@@ -1,0 +1,79 @@
+
+.tcl-theme-ios .chatbox__title{
+    background-color: #ffffff;
+}
+.tcl-theme-ios .chatbox {
+    border: 1px solid #cccccce8;
+}
+
+.tcl-theme-ios .chatbox__body__message--right .ul_section_full {
+
+    background-color: #4285f5;
+    color: #fff;
+
+}
+.tcl-theme-ios .chatbox__body__message--left .ul_section_full {
+
+    background-color: #e6e6e6;
+    color: #000000;
+
+}
+.tcl-theme-ios  .chatbox__body__message--right .chatbox_timing a{
+    color: #fff;
+}
+.tcl-theme-ios .chatbox__body{
+    background: #fff;
+}
+
+.tcl-theme-ios #btn-chat svg{
+    fill: #4285f5;
+}
+
+.tcl-theme-ios .welcome-notice {
+    background: #ededed;
+}
+.tcl-theme-ios .chatbox__title__close {
+    fill: #ccc;
+    color: #ccc;
+    background: #2d62d9;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+.tcl-theme-ios .tcl-theme-ios .chatbox.chatbox--tra .chatbox__title{
+    animation: blink;
+}
+.tcl-theme-ios .chatbox.chatbox--tray .chatbox__title {
+    animation: 1s linear 0s infinite alternate blink;
+}
+
+@keyframes blink {
+
+    0% {
+        transform: scale(.9);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+
+
+@keyframes blink {
+
+    0% {
+        background: #ffffff;
+
+
+    }
+
+    100% {
+        background: #d7d7d7;
+
+    }
+
+}

@@ -1,0 +1,502 @@
+#telsenderevent {
+    max-width: 600px;
+}
+
+
+#telsenderevent fieldset {
+    border: solid 1px #ccc;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+    background: #fff;
+
+}
+
+#telsenderevent legend {
+    padding: 5px;
+    background: #ffff;
+    border-radius: 5px 5px 0 0;
+    font-weight: 700;
+    /* border: solid 1px #ccc; */
+    /*box-shadow: 0px -3px 4px;*/
+}
+
+#telsenderevent .utm_list {
+    display: flex;
+}
+
+#telsenderevent input {
+    border-radius: 0;
+    margin: 1px 0;
+}
+
+#telsenderevent button.add {
+    background: green;
+    margin: 1px;
+    color: #fff;
+}
+
+#telsenderevent button.remove {
+    color: #fff;
+    background: red;
+    margin: 1px;
+}
+
+#telsenderevent input::placeholder {
+    opacity: 0.5;
+}
+
+#telsenderevent input[type=checkbox],
+#telsenderevent input[type=checkbox]:focus {
+    border: none;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    display: inline-flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#telsenderevent input[type=checkbox]:checked::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='green' class='bi bi-toggle-on' viewBox='0 0 16 16'%3E%3Cpath d='M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/svg%3E");
+
+
+    margin: 0;
+    height: 30px;
+    transition: all .2s;
+    width: 50px;
+
+}
+
+#telsenderevent input[type=checkbox]::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-toggle-off' viewBox='0 0 16 16'%3E%3Cpath d='M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z'/%3E%3C/svg%3E");
+    margin: 0;
+    width: 50px;
+    transition: all .2s;
+    height: 30px;
+
+}
+
+.disabled {
+    opacity: .4;
+    cursor: no-drop;
+    position: relative;
+}
+
+.tcl-table-list{
+    width:100%;
+}
+
+.tcl-table-list td{
+    padding:5px;
+}
+
+.disabled:before {
+    content: '';
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /* background: #ccc; */
+}
+.tcl-preloader{
+    display: none;
+}
+.tcl-preloader.show{
+    display: block!important;
+}
+
+/**
+Modal
+ */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    padding-bottom: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 80vh;
+    overflow: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.chatbox__credentials {
+    display: none;
+}
+
+.chatbox__credentials .form-control {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.chatbox__body {
+    overflow-y: auto;
+}
+
+.chatbox__body__message {
+    position: relative;
+}
+
+.chatbox__body__message p {
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+    box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+}
+
+.chatbox__body__message .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fcfcfc;
+    position: absolute;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.chatbox__body__message--left p {
+    margin-left: 15px;
+    padding-left: 30px;
+    text-align: left;
+    padding-top: 25px;
+}
+
+.chatbox__body__message--left .avatar {
+    left: -5px;
+}
+
+.chatbox__body__message--right p {
+    margin-right: 15px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+.chatbox__body__message--right .avatar {
+    right: -5px;
+}
+
+.chatbox__message {
+    padding: 15px;
+    min-height: 50px;
+    outline: 0;
+    resize: none;
+    font-size: 12px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    background-color: #fefefe;
+}
+
+
+.chatbox--empty {
+    height: 262px;
+}
+
+.chatbox--empty.chatbox--tray {
+    bottom: -212px;
+}
+
+.chatbox--empty.chatbox--closed {
+    bottom: -262px;
+}
+
+.chatbox--empty .chatbox__body,
+.chatbox--empty .chatbox__message {
+    display: none;
+}
+
+.chatbox--empty .chatbox__credentials {
+    display: block;
+}
+
+.chatbox_timing {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    top: 2px;
+}
+
+.chatbox_timing ul {
+    padding: 0;
+    margin: 0
+}
+
+.chatbox_timing ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.chatbox_timing ul li a {
+    display: block;
+    color: #747474;
+    font-size: .8em;
+}
+
+.ul_msg {
+    padding: 10px !important;
+}
+
+.chatbox__body__message--right .ul_section_full {
+    margin-right: 15px;
+    padding-right: 30px;
+    text-align: right;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #92ffdc;
+    -webkit-box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+    box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    padding-top: 15px;
+}
+
+.chatbox__body__message--left .ul_section_full {
+    margin-left: 15px;
+    padding-left: 15px;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #dfdede;
+    -webkit-box-shadow: 1px 1px rgba(100, 100, 100, 0.1);
+    box-shadow: 1px 1px rgb(100 100 100 / 49%);
+}
+
+.ul_msg {
+    padding: 0;
+    margin: 0
+}
+
+.ul_msg li {
+    list-style: none;
+    display: block
+}
+
+.ul_msg2 {
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.ul_msg2 li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.chatbox__body__message--right .chatbox_timing {
+    position: absolute;
+    left: 10px;
+    font-size: 12px;
+    top: 2px;
+}
+
+.chatbox__body__message--right .ul_msg2 {
+    text-align: left
+}
+
+.chatbox__body__message--right .ul_msg2 li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 0
+}
+
+.chat_set_height {
+    height: 40px;
+    margin-top: 1px;
+}
+
+.chatbox22 .form-control:focus {
+    border-color: #DCDCDC;
+}
+
+.width50 {
+    width: 50%;
+    float: left;
+    background: #ECECEC;
+}
+.chatbox.chatbox22.chatbox--tray {
+    width: auto;
+    transition: .3s all;
+}
+
+/*======================Chat Box Ends=====================================================*/
+/*======================Message=====================================================*/
+.message_check {
+    padding-top: 10px;
+}
+
+.messsade_date {
+    text-align: left;
+    padding-top: 9px;
+}
+
+.messsade_date a {
+    color: #000;
+}
+
+.padleftright0 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.message_box_area {
+    color: #000;
+    cursor: pointer;
+}
+
+.create_m {
+    border: 1px solid #ccc !important;
+}
+
+.fileinput-button {
+    float: left;
+    margin-right: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fileinput-button {
+    background: none repeat scroll 0 0 #eeeeee;
+    border: 1px solid #e6e6e6;
+    margin-top: 15px;
+}
+
+.fileinput-button {
+    float: left;
+    margin-right: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.fileinput-button input {
+    cursor: pointer;
+    direction: ltr;
+    font-size: 23px;
+    margin: 0;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-300px, 0px) scale(4);
+}
+
+.fileupload-buttonbar .btn, .fileupload-buttonbar .toggle {
+    margin-bottom: 5px;
+}
+
+.create_m:focus {
+    border-color: #66afe9 !important;
+    outline: 0 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6) !important;
+}
+
+.col-lg-3.control-label {
+    text-align: left;
+}
+
+#tcl-root-chat .input-group-btn {
+    position: absolute;
+    right: 0;
+    width: 51px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+ul.ul_msg li img {
+    display: inline-block !important;
+    position: unset;
+}
+
+#tcl-root-chat .chatbox__body::-webkit-scrollbar {
+    width: 5px; /* width of the entire scrollbar */
+}
+
+#tcl-root-chat .chatbox__body::-webkit-scrollbar-track {
+    background: #ccc; /* color of the tracking area */
+}
+
+#tcl-root-chat .chatbox__body::-webkit-scrollbar-thumb {
+    background-color: #1f2836cc; /* color of the scroll thumb */
+    border-radius: 4px; /* roundness of the scroll thumb */
+    border: 1px solid #1f2836cc; /* creates padding around scroll thumb */
+}
+
+#tcl-root-chat .chatbox__body__message{
+    animation: loadMessage .6s;
+    transform-origin: center right;
+    animation-timing-function: cubic-bezier(.9,.01,.07,1.12)
+}
+
+#tcl-root-chat .chatbox__body__message.chatbox__body__message--right{
+    transform-origin: center right;
+}
+#tcl-root-chat .chatbox__body__message.chatbox__body__message--left{
+    transform-origin: center left;
+}
+
+#tcl-root-chat  .panel-footer {
+    border-top: 1px solid #ccc;
+}
+@keyframes loadMessage {
+
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
